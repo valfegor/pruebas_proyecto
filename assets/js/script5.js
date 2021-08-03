@@ -1,50 +1,104 @@
-let favoritos = document.querySelectorAll('.add');
-let listafavoritos = [];
-let titulo = document.querySelectorAll('.titulo');
-let parrafo= document.querySelectorAll('.parrafo-post');
-let local = document.getElementById("local");
+let add1 = document.getElementById("add1");
+let add2 = document.getElementById("add2");
+let add3 = document.getElementById("add3");
+let add4 = document.getElementById("add4");
+let add5 = document.getElementById("add5");
+let add6 = document.getElementById("add6");
+console.log(add6)
 let obj = {}
-let array = []
+let array = [];
 
-for(let i = 0 ; i<favoritos.length; i++) {
-
-    boton = favoritos[i];
-
-    boton.onclick = function(){
-        alert("diste clic");
-        titulo1 = titulo[i].innerHTML;
-        parrafo1 = parrafo[i].innerHTML;
-        obj={
-            titulo:titulo1,
-            parrafo:parrafo1
-        }
-        array.push(obj);
-        console.log(obj);
-        localStorage.setItem('favoritos',JSON.stringify(array));
+add1.onclick= function(){
+    let p1 = document.getElementById("p1");
+    let t1 = document.getElementById("t1");
+    console.log(p1 , t1) 
+    obj = {
+        titulo:t1.textContent,
+        parrafo:p1.textContent
     }
+
+    array.push(obj);
+    localStorage.setItem('favoritos',JSON.stringify((array)));
+
+    console.log(array);
 
 }
 
-
-const obtenerFavoritos = () =>{
-    let favoritos1 = localStorage.getItem('favoritos');
-    if(favoritos1== null){
-        array = [];
+add2.onclick= function(){
+    let p2 = document.getElementById("p2");
+    let t2 = document.getElementById("t2");
+    
+    obj = {
+        titulo:t2.textContent,
+        parrafo:p2.textContent
     }
-    else{
-        array = JSON.parse(favoritos1);
-    }
-    return array;
-}   
 
-const pintar = () =>{
- let lista = obtenerFavoritos();
- let html = "";  
- lista.forEach(element => {
-     html += `<p>${element.titulo}</p>`
-     html += `<p>${element.parrafo}</p>`
- });
- local.innerHTML = html;
+    array.push(obj);
+    localStorage.setItem('favoritos',JSON.stringify((array)));
+
+    console.log(array);
+
 }
 
-pintar();
+add3.onclick= function(){
+    let p3 = document.getElementById("p3");
+    let t3 = document.getElementById("t3");
+    
+    obj = {
+        titulo:t3.textContent,
+        parrafo:p3.textContent
+    }
+
+    array.push(obj);
+    localStorage.setItem('favoritos',JSON.stringify((array)));
+
+    console.log(array);
+
+}
+
+add4.onclick= function(){
+    let p4 = document.getElementById("p4");
+    let t4 = document.getElementById("t4");
+    
+    obj = {
+        titulo:t4.textContent,
+        parrafo:p4.textContent
+    }
+
+    array.push(obj);
+    localStorage.setItem('favoritos',JSON.stringify((array)));
+
+    console.log(array);
+
+}
+
+add5.onclick= function(){
+    let p5 = document.getElementById("p5");
+    let t5 = document.getElementById("t5");
+    
+    obj = {
+        titulo:t5.textContent,
+        parrafo:p5.textContent
+    }
+
+    array.push(obj);
+    localStorage.setItem('favoritos',JSON.stringify((array)));
+
+    console.log(array);
+}
+
+
+add6.onclick= function(){
+    let p6 = document.getElementById("p6");
+    let t6 = document.getElementById("t6");
+    
+    obj = {
+        titulo:t6.textContent,
+        parrafo:p6.textContent
+    }
+
+    array.push(obj);
+    localStorage.setItem('favoritos',JSON.stringify((array)));
+
+    console.log(array);
+}
