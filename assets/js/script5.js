@@ -4,7 +4,8 @@ let add3 = document.getElementById("add3");
 let add4 = document.getElementById("add4");
 let add5 = document.getElementById("add5");
 let add6 = document.getElementById("add6");
-console.log(add6)
+
+console.log(add1)
 let obj = {}
 let array = [];
 
